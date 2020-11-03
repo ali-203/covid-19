@@ -21,7 +21,7 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   search: {
-    position: 'relative',
+    position: "relative",
     borderRadius: theme.shape.borderRadius,
     backgroundColor: fade(theme.palette.common.white, 0.15),
     '&:hover': {
@@ -77,7 +77,7 @@ export default function SearchAppBar() {
               <SearchIcon />
             </div>
             <InputBase
-              placeholder="Search…"
+              placeholder="Enter Country…"
               classes={{
                 root: classes.inputRoot,
                 input: classes.inputInput,
