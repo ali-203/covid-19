@@ -37,7 +37,7 @@ export default function InfoPanel() {
       <Grid container spacing={3}>
       {Object.keys(globalData).map((val, ind) => {
         return (
-          <Grid item xs={12} sm={4}> key={ind}>
+          <Grid item xs={12} sm={4} key={ind}>
           <Paper
            className={classes.paper} elevation={3}>
            {val}
