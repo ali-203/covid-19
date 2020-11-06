@@ -19,8 +19,8 @@ const useStyles = makeStyles((theme) => ({
 export default function InfoPanel() {
   const [globalData, setGlobalData] = useState({});
   
-  useEffect(()=>{
-    async function getData(){
+  useEffect(() => {
+    async function getData() {
         const response = await fetch("http://api.thevirustracker.com/free-apiglobal=stats")
         let data = await response.json();
         delete data.results[0].source;
@@ -35,11 +35,17 @@ export default function InfoPanel() {
   return (    
     <div className={classes.root}>
       <Grid container spacing={3}>
-        <Grid item xs={12} sm={4}>
-          <Paper className={classes.paper} elevation={3}>Grid 1</Paper>
+      {Object.keys(globalData).map((val, ind) => {
+        return (
+          <Grid item xs={12} sm={4}> key={ind}>
+          <Paper
+           className={classes.paper} elevation={3}>
+           {val}
+           </Paper>
         </Grid>
+        )
+      })}
         
-    
       </Grid>
     </div>
   );
