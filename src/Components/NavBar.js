@@ -8,7 +8,6 @@ import SearchIcon from '@material-ui/icons/Search';
 
 const useStyles = makeStyles((theme) => ({
 
-
 }));
 
 export default function NavBar() {
